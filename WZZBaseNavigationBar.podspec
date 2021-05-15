@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "WZZBaseNavigationBar"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "WZZBaseNavigationBar是一个方便、易用且灵活的基础导航栏"
 
   # This description is used to generate tags and improve search results.
