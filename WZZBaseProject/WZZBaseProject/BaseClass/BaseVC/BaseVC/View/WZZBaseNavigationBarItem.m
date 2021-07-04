@@ -53,10 +53,8 @@
     //清空约束，移除视图
     [self.label removeConstraints:self.label.constraints];
     [self.imageView removeConstraints:self.imageView.constraints];
-    [self.topButton removeConstraints:self.topButton.constraints];
     [self.label removeFromSuperview];
     [self.imageView removeFromSuperview];
-    [self.topButton removeFromSuperview];
     self.imageView.image = self.image;
     self.imageView.contentMode = UIViewContentModeScaleAspectFit;
     self.label.text = self.text;
@@ -109,13 +107,6 @@
         //啥没有
         [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:0];
     }
-    
-    //按钮
-    [self addSubview:self.topButton];
-    [NSLayoutConstraint constraintWithItem:self.topButton attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTop multiplier:1 constant:-self.buttonEdge.top].active = YES;
-    [NSLayoutConstraint constraintWithItem:self.topButton attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeBottom multiplier:1 constant:self.buttonEdge.bottom].active = YES;
-    [NSLayoutConstraint constraintWithItem:self.topButton attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeLeft multiplier:1 constant:-self.buttonEdge.left].active = YES;
-    [NSLayoutConstraint constraintWithItem:self.topButton attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeRight multiplier:1 constant:self.buttonEdge.right].active = YES;
 }
 
 /// 创建UI

@@ -105,6 +105,14 @@
             [NSLayoutConstraint constraintWithItem:item attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:lastView?lastView:superView attribute:lastView?NSLayoutAttributeRight:NSLayoutAttributeLeft multiplier:1 constant:lastView?(space?space.doubleValue:5):0].active = YES;
         }
         
+        UIButton * topButton = [item valueForKey:@"topButton"];
+        //按钮
+        [self addSubview:topButton];
+        [NSLayoutConstraint constraintWithItem:topButton attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:item attribute:NSLayoutAttributeTop multiplier:1 constant:-item.buttonEdge.top].active = YES;
+        [NSLayoutConstraint constraintWithItem:topButton attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:item attribute:NSLayoutAttributeBottom multiplier:1 constant:item.buttonEdge.bottom].active = YES;
+        [NSLayoutConstraint constraintWithItem:topButton attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:item attribute:NSLayoutAttributeLeft multiplier:1 constant:-item.buttonEdge.left].active = YES;
+        [NSLayoutConstraint constraintWithItem:topButton attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:item attribute:NSLayoutAttributeRight multiplier:1 constant:item.buttonEdge.right].active = YES;
+        
         lastView = item;
     }
     //lastView右

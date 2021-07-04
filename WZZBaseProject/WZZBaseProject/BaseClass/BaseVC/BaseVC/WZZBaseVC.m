@@ -80,6 +80,7 @@
     self.backItem = [self.wzz_navigationBar addItemWithImage:[UIImage imageNamed:@"通用_返回"] imageWidth:@(10) place:WZZBaseNavigationBarPlace_Left onClick:^(WZZBaseNavigationBarItem *obj) {
         [weakSelf basevc_backClick];
     }];
+    self.backItem.buttonEdge = UIEdgeInsetsMake(0, 10, 0, 10);
     
     //导航栏刷新UI
     [self.wzz_navigationBar createUI];
